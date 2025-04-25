@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặc sản Hedaqua</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* HEADER TOP */
+    .header-top {
+      background-color: #6ab04c;
+      color: white;
+      font-size: 14px;
+      padding: 6px 0;
+    }
+
+    .header-top .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    .header-top .left,
+    .header-top .right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    /* HEADER BOTTOM */
+    .header-bottom {
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header-bottom .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo img {
+      height: 48px;
+    }
+
+    .search-box {
+      flex: 1;
+      margin: 0 30px;
+      max-width: 500px;
+      display: flex;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid #6ab04c;
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .search-box button {
+      background-color: #6ab04c;
+      border: none;
+      padding: 10px 16px;
+      color: white;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .hotline {
+      background-color: #6ab04c;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .icons {
+    display: flex;
+    gap: 16px;
+    margin-left: 20px;
+  }
+
+  .icons > div {
+    background-color: #6ab04c;
+    border-radius: 4px;
+    position: relative;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icons i {
+    color: white;
+    font-size: 18px;
+  }
+
+  .icons .badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: #f24822;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  .nabar-container {
+      background-color: #f4f4f4;
+      border-bottom: 4px solid #6ab04c;
+    }
+
+    .navbar {
+      margin: auto;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 150px;
+      height: 60px;
+    }
+
+    .menu-left {
+      display: flex;
+      align-items: center;
+      color: #477433;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .menu-left i {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .menu-right {
+      display: flex;
+      gap: 40px;
+    }
+
+    .menu-right a {
+      color: #477433;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .menu-right a:hover {
+      color: #6ab04c;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+        height: auto;
+      }
+
+      .menu-right {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER TOP -->
+  <div class="header-top">
+    <div class="container">
+      <div class="left">
+        <div><i class="fas fa-phone"></i> +0702-500-230</div>
+        <div><i class="fas fa-envelope"></i> thanh261220@gmail.com</div>
+        <div><i class="fas fa-map-marker-alt"></i> 48 Cao Thắng, TP. Đà Nẵng</div>
+      </div>
+      <div class="right">
+        <div><i class="fas fa-dollar-sign"></i> Số dư</div>
+        <div><i class="fas fa-user"></i> Tài khoản</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER BOTTOM -->
+  <div class="header-bottom">
+    <div class="container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="./Assets/img/logo.png" alt="Logo">
+      </div>
+
+      <!-- Search -->
+      <div class="search-box">
+        <input type="text" placeholder="Bạn cần tìm gì ?">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <!-- Hotline -->
+      <div class="hotline">
+        <i class="fas fa-headset"></i> Hotline: 19001599
+      </div>
+
+      <div class="icons">
+        <div>
+          <i class="fas fa-user"></i>
+        </div>
+        <div>
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="badge">5</span>
+        </div>
+        <div>
+          <i class="fas fa-shopping-cart"></i>
+          <span class="badge">7</span>
+        </div>
+    </div>
+  </div>
+ </div>
+ <div class="nabar-container">
+  <div class="navbar">
+    <div class="menu-left">
+      <i class="fas fa-bars"></i>
+      <span>Tất cả danh mục</span>
+    </div>
+    <div class="menu-right">
+      <a href="#">Trang chủ</a>
+      <a href="#">Giới thiệu</a>
+      <a href="#">Sản phẩm</a>
+      <a href="#">Blog</a>
+      <a href="#">Liên hệ</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

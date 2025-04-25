@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rượu Nhất Dạ Đế Vương (Vàng)</title>
+    <title>Huế - Nơi Gửi Gắm Hồn Quê Qua Từng Món Quà</title>
     <style>
         * {
             margin: 0;
@@ -11,686 +11,219 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-
+        
         body {
-            background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
-        }
-
-        .container {
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
-            background-color: #fff;
         }
-
-        /* Breadcrumb styles */
-        .breadcrumb {
-            display: flex;
-            padding: 15px 0;
-            font-size: 13px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .breadcrumb a {
-            color: #666;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-
-        .breadcrumb a:after {
-            content: ">";
-            margin-left: 10px;
-            color: #ccc;
-        }
-
-        .breadcrumb span {
-            color: #333;
-        }
-
-        /* Product main section */
-        .product-main {
-            display: flex;
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .product-gallery {
-            width: 40%;
-            padding-right: 30px;
-        }
-
-        .main-image {
-            width: 100%;
-            border: 1px solid #eee;
-            margin-bottom: 10px;
-        }
-
-        .thumbnail-container {
+        
+        .container {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
         }
-
-        .thumbnail {
-            width: 70px;
-            height: 70px;
-            border: 1px solid #ddd;
-            cursor: pointer;
-            object-fit: cover;
+        
+        .main-content {
+            flex: 1;
+            min-width: 70%;
+            padding-right: 30px;
         }
-
-        .product-info {
-            width: 60%;
-        }
-
-        .product-title {
-            font-size: 22px;
-            color: #333;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .product-meta {
-            display: flex;
-            margin-bottom: 20px;
-        }
-
-        .product-meta-left {
-            width: 60%;
-        }
-
-        .product-meta-right {
-            width: 40%;
+        
+        .sidebar {
+            width: 250px;
             background-color: #f9f9f9;
             padding: 15px;
             border-radius: 5px;
-        }
-
-        .product-price {
-            font-size: 22px;
-            color: #ff6600;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .product-status {
-            margin-bottom: 5px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-        }
-
-        .status-icon {
-            color: #4CAF50;
-            margin-right: 5px;
-        }
-
-        .product-description {
-            margin-bottom: 15px;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .quantity-control {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .quantity-label {
-            margin-right: 15px;
-            font-size: 14px;
-        }
-
-        .quantity-buttons {
-            display: flex;
-            align-items: center;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-        }
-
-        .quantity-btn {
-            width: 30px;
-            height: 30px;
-            border: none;
-            background-color: #f5f5f5;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .quantity-input {
-            width: 40px;
-            height: 30px;
-            border: none;
-            text-align: center;
-            font-size: 16px;
-        }
-
-        .product-actions {
-            display: flex;
-            gap: 10px;
             margin-top: 20px;
         }
-
-        .buy-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 30px;
-            font-size: 15px;
-            cursor: pointer;
-            border-radius: 3px;
-            text-transform: uppercase;
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #006633;
         }
-
-        .cart-button {
-            background-color: #f8f8f8;
-            color: #333;
-            border: 1px solid #ddd;
-            padding: 10px 15px;
+        
+        .date-info {
             font-size: 14px;
-            cursor: pointer;
-            border-radius: 3px;
+            color: #777;
+            margin-bottom: 20px;
         }
-
-        /* Table of contents */
+        
+        .main-image {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
         .toc {
+            background-color: #f5f5f5;
+            padding: 20px;
             margin: 30px 0;
-            padding: 15px;
-            border: 1px solid #eee;
-            background-color: #f9f9f9;
+            border-radius: 5px;
         }
-
-        .toc-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #eee;
+        
+        .toc h2 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            border-bottom: 1px solid #ddd;
             padding-bottom: 10px;
         }
-
-        .toc-list {
-            list-style-position: inside;
-            margin-left: 10px;
-        }
-
-        .toc-list li {
-            margin-bottom: 5px;
-            font-size: 14px;
-        }
-
-        /* Product sections */
-        .product-section {
-            margin: 30px 0;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
-
-        .section-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .section-content {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .feature-list {
-            list-style-type: disc;
+        
+        .toc ol {
             margin-left: 20px;
+        }
+        
+        .toc li {
+            margin-bottom: 8px;
+        }
+        
+        h2 {
+            font-size: 22px;
+            margin: 25px 0 15px;
+            color: #006633;
+        }
+        
+        p {
             margin-bottom: 15px;
+            text-align: justify;
         }
-
-        .feature-list li {
-            margin-bottom: 5px;
-        }
-
+        
         .product-image {
             width: 100%;
-            height: auto;
-            margin: 15px 0;
+            max-width: 500px;
             display: block;
+            margin: 20px auto;
+            border-radius: 5px;
         }
-
-        .image-caption {
-            text-align: center;
-            font-style: italic;
-            font-size: 13px;
-            color: #666;
+        
+        .sidebar h3 {
+            font-size: 16px;
             margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
         }
-
-        /* Product specifications */
-        .product-specs {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
+        
+        .sidebar ul {
+            list-style: none;
         }
-
-        .product-specs tr {
+        
+        .sidebar li {
+            padding: 8px 0;
             border-bottom: 1px solid #eee;
         }
-
-        .product-specs td {
-            padding: 10px 5px;
-            font-size: 14px;
+        
+        .sidebar li a {
+            text-decoration: none;
+            color: #444;
         }
-
-        .product-specs td:first-child {
-            width: 150px;
-            color: #666;
+        
+        .sidebar li a:hover {
+            color: #009933;
         }
-
-        /* Related products */
-        .related-products {
-            margin: 30px 0;
-        }
-
-        .related-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .related-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .related-item {
-            width: calc(20% - 16px);
-            min-width: 150px;
-            border: 1px solid #eee;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .related-item img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .related-item-title {
-            font-size: 13px;
-            margin-bottom: 5px;
-            font-weight: normal;
-            height: 40px;
-            overflow: hidden;
-        }
-
-        .related-item-price {
-            font-size: 14px;
-            color: #ff6600;
-            margin-bottom: 10px;
-        }
-
-        .related-item-button {
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-            padding: 5px 10px;
-            font-size: 12px;
-            cursor: pointer;
-            border-radius: 3px;
-            color: #333;
-        }
-
-        /* Reviews */
-        .review-section {
-            margin: 30px 0;
-        }
-
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .rating-summary {
-            display: flex;
-            align-items: center;
-        }
-
-        .rating-stars {
-            color: #ffcc00;
-            font-size: 18px;
-            margin-right: 5px;
-        }
-
-        .rating-score {
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .rating-bar {
-            width: 150px;
-            height: 10px;
-            background-color: #eee;
-            margin: 0 10px;
-            position: relative;
-        }
-
-        .rating-fill {
-            height: 100%;
-            background-color: #ffcc00;
-        }
-
-        .rating-percent {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .add-review-btn {
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-            padding: 8px 15px;
-            font-size: 13px;
-            cursor: pointer;
-            border-radius: 3px;
-            color: #333;
-        }
-
-        .review-item {
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .review-author {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .review-text {
-            font-size: 14px;
-            margin-top: 5px;
-        }
-
-        .bottom-action {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .bottom-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 30px;
-            font-size: 15px;
-            cursor: pointer;
-            border-radius: 3px;
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .main-content {
+                padding-right: 0;
+            }
+            
+            .sidebar {
+                width: 100%;
+                margin-top: 30px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <a href="#">Trang chủ</a>
-            <a href="#">Đặc sản vùng miền</a>
-            <a href="#">Rượu các loại</a>
-            <span>Rượu Nhất Dạ Đế Vương (Vàng)</span>
-        </div>
-
-        <!-- Product Main Section -->
-        <div class="product-main">
-            <div class="product-gallery">
-                <img src="/api/placeholder/500/500" alt="Rượu Nhất Dạ Đế Vương" class="main-image">
-                <div class="thumbnail-container">
-                    <img src="/api/placeholder/70/70" alt="Thumbnail 1" class="thumbnail">
-                    <img src="/api/placeholder/70/70" alt="Thumbnail 2" class="thumbnail">
-                    <img src="/api/placeholder/70/70" alt="Thumbnail 3" class="thumbnail">
-                    <img src="/api/placeholder/70/70" alt="Thumbnail 4" class="thumbnail">
-                    <img src="/api/placeholder/70/70" alt="Thumbnail 5" class="thumbnail">
-                </div>
-            </div>
-
-            <div class="product-info">
-                <h1 class="product-title">RƯỢU NHẤT DẠ ĐẾ VƯƠNG (VÀNG)</h1>
-                
-                <div class="product-meta">
-                    <div class="product-meta-left">
-                        <div class="product-description">
-                            Rượu Công đoàn tốt, mạnh mẽ tốt cho phái mạnh, giúp quý ông có sức khỏe tốt và bổ sung năng lượng. Rượu thơm ngon, quý hiếm và đặc biệt là loại thượng hạng.
-                        </div>
-                        
-                        <div class="product-status">
-                            <span class="status-icon">✓</span>
-                            <span>Còn hàng (còn nhiều)</span>
-                        </div>
-                        
-                        <div class="product-status">
-                            <span class="status-icon">✓</span>
-                            <span>Giao hàng toàn quốc</span>
-                        </div>
-                        
-                        <div class="product-status">
-                            <span class="status-icon">✓</span>
-                            <span>Hàng chất lượng cao</span>
-                        </div>
-                    </div>
-                    
-                    <div class="product-meta-right">
-                        <div class="product-price">600.000đ</div>
-                        <div class="product-status">
-                            <span class="status-icon">✓</span>
-                            <span>Thương hiệu: Rượu truyền thống</span>
-                        </div>
-                        
-                        <div class="quantity-control">
-                            <span class="quantity-label">Số lượng:</span>
-                            <div class="quantity-buttons">
-                                <button class="quantity-btn">-</button>
-                                <input type="text" value="1" class="quantity-input">
-                                <button class="quantity-btn">+</button>
-                            </div>
-                        </div>
-                        
-                        <div class="product-actions">
-                            <button class="buy-button">Mua ngay</button>
-                            <button class="cart-button">Thêm vào giỏ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Table of Contents -->
-        <div class="toc">
-            <h2 class="toc-title">Mục lục</h2>
-            <ol class="toc-list">
-                <li>Rượu Nhất Dạ Đế Vương (Vàng) là gì?</li>
-                <li>Thông tin sản phẩm rượu Nhất Dạ Đế Vương (Vàng)</li>
-                <li>Cách bảo quản rượu Nhất Dạ Đế Vương (Vàng)</li>
-                <li>Rượu Nhất Dạ Đế Vương (Vàng) có giá bao nhiêu?</li>
-                <li>Uống rượu Nhất Dạ Đế Vương có tốt sức khỏe?</li>
-                <li>Công dụng rượu Nhất Dạ Đế Vương</li>
-                <li>Mua rượu Nhất Dạ Đế Vương (Vàng) ở đâu uy tín, chất lượng?</li>
-                <li>Các mẫu rượu khác</li>
-                <li>Tài liệu tham khảo</li>
-            </ol>
-        </div>
-
-        <!-- Product Section 1 -->
-        <div class="product-section">
-            <h3 class="section-title">Rượu Nhất Dạ Đế Vương (Vàng) là gì?</h3>
-            <div class="section-content">
-                <ul class="feature-list">
-                    <li>Nguồn gốc xuất xứ: Việt Nam</li>
-                    <li>Nồng độ cồn: 45 độ</li>
-                </ul>
-                
-                <p>Rượu Nhất Dạ Đế Vương (Vàng) là một dòng rượu cao cấp mang đến bài thuốc của huy phương đông, được chưng cất và lựa chọn từ những nguyên liệu tự nhiên, quý hiếm và thượng hạng nhất. Với hàng trăm vị thuốc nam quý hiếm được chọn lọc kỹ lưỡng, rượu có vị ngọt nhẹ và đậm đà, đem lại cho người sử dụng những công năng kỳ diệu, tuyệt vời.</p>
-                
-                <img src="/api/placeholder/800/500" alt="Rượu Nhất Dạ Đế Vương" class="product-image">
-                <p class="image-caption">Các sản phẩm đóng chai trứ - Rượu nhất dạ đế vương</p>
-                
-                <p>Rượu được sản xuất với quy trình nghiêm ngặt từ men lựu đến gạo nếp, men tuồng và các loại thảo dược quý hiếm, mang lại hài nghiện tinh khiết và độc đáo mà ít loại rượu nào có được. Đây là loại rượu nổi tiếng từ thời xưa, hiện đã được cải tiến hiện đại hơn về mẫu mã nhưng vẫn giữ được hương vị truyền thống.</p>
-            </div>
-        </div>
-
-        <!-- Product Section 2 -->
-        <div class="product-section">
-            <h3 class="section-title">Thông tin sản phẩm rượu Nhất Dạ Đế Vương (Vàng)</h3>
-            <div class="section-content">
-                <table class="product-specs">
-                    <tr>
-                        <td>Tên sản phẩm</td>
-                        <td>Rượu Nhất Dạ Đế Vương (Vàng)</td>
-                    </tr>
-                    <tr>
-                        <td>Mã sản phẩm</td>
-                        <td>RVV-001</td>
-                    </tr>
-                    <tr>
-                        <td>Dung tích</td>
-                        <td>500ml / 750ml</td>
-                    </tr>
-                    <tr>
-                        <td>Hương vị</td>
-                        <td>Đậm đà, thơm nồng, êm dịu</td>
-                    </tr>
-                    <tr>
-                        <td>Độ cồn</td>
-                        <td>45 độ</td>
-                    </tr>
-                    <tr>
-                        <td>Hạn sử dụng</td>
-                        <td>Ngon cơ 15 năm trở lên</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <!-- Product Section 3 -->
-        <div class="product-section">
-            <h3 class="section-title">Uống rượu Nhất Dạ Đế Vương có dễ say không?</h3>
-            <div class="section-content">
-                <p>Với nồng độ cồn 45 độ, Rượu Nhất Dạ Đế Vương được xem là loại rượu mạnh, nhưng nhờ quá trình chưng cất kỹ lưỡng, rượu không gắt. Tuy nhiên, vẫn nên uống có mức độ và tùy theo sức chịu đựng của từng người để tránh say.</p>
-            </div>
-        </div>
-
-        <!-- Product Section 4 -->
-        <div class="product-section">
-            <h3 class="section-title">Công dụng của rượu Nhất Dạ Đế Vương</h3>
-            <div class="section-content">
-                <img src="/api/placeholder/800/500" alt="Công dụng rượu" class="product-image">
-                
-                <p>Với hơn 100 vị thuốc quý trong thành phần, rượu này có tác dụng bổ huyết, tăng cường sức khỏe, kích thích tiêu hóa, giúp giấc ngủ sâu và ngon hơn. Đặc biệt, rượu còn được xem là "thần dược" cho sức khỏe nam giới, hỗ trợ tăng cường sinh lý.</p>
-                
-                <div class="bottom-action">
-                    <button class="bottom-button">Mua Hàng</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Related Products -->
-        <div class="related-products">
-            <h3 class="related-title">Sản phẩm tương tự</h3>
-            <div class="related-grid">
-                <div class="related-item">
-                    <img src="/api/placeholder/150/150" alt="Sản phẩm tương tự 1">
-                    <div class="related-item-title">Rượu Phong Thủy Phượng Hoàng</div>
-                    <div class="related-item-price">650.000đ</div>
-                    <button class="related-item-button">Thêm vào giỏ</button>
-                </div>
-                <div class="related-item">
-                    <img src="/api/placeholder/150/150" alt="Sản phẩm tương tự 2">
-                    <div class="related-item-title">Rượu Sâm Đại Hàn Hồng sâm hộp</div>
-                    <div class="related-item-price">2.450.000đ</div>
-                    <button class="related-item-button">Thêm vào giỏ</button>
-                </div>
-                <div class="related-item">
-                    <img src="/api/placeholder/150/150" alt="Sản phẩm tương tự 3">
-                    <div class="related-item-title">Tủ trưng bày Phú Quốc nhỏ</div>
-                    <div class="related-item-price">18.000.000đ</div>
-                    <button class="related-item-button">Thêm vào giỏ</button>
-                </div>
-                <div class="related-item">
-                    <img src="/api/placeholder/150/150" alt="Sản phẩm tương tự 4">
-                    <div class="related-item-title">Hộ Long Bình Phú Quốc đặc sản</div>
-                    <div class="related-item-price">15.000.000đ</div>
-                    <button class="related-item-button">Thêm vào giỏ</button>
-                </div>
-                <div class="related-item">
-                    <img src="/api/placeholder/150/150" alt="Sản phẩm tương tự 5">
-                    <div class="related-item-title">Túi rượu Phú Quốc 250ml loại đặc biệt</div>
-                    <div class="related-item-price">250.000đ</div>
-                    <button class="related-item-button">Thêm vào giỏ</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Reviews Section -->
-        <div class="review-section">
-            <div class="review-header">
-                <div class="section-title">Đánh giá và bình luận (2)</div>
+        <div class="main-content">
+            <h1>Huế - Nơi Gửi Gắm Hồn Quê Qua Từng Món Quà</h1>
+            <div class="date-info">Đã đăng lúc: 05/02/2023 bởi Admin Phong</div>
+            
+            <img src="/api/placeholder/800/400" alt="Hoàng hôn tại Huế với Chùa Thiên Mụ" class="main-image">
+            
+            <div class="toc">
+                <h2>Mục lục</h2>
+                <ol>
+                    <li>Giới thiệu về Huế</li>
+                    <li>Quà lưu niệm đặc trưng của Huế
+                        <ol>
+                            <li>Nón lá Huế</li>
+                            <li>Hương trầm Thủy Xuân</li>
+                            <li>Tranh thêu tay</li>
+                            <li>Gốm sứ công đình</li>
+                        </ol>
+                    </li>
+                    <li>Đặc sản nổi bật của Huế
+                        <ol>
+                            <li>Mè xừng</li>
+                            <li>Tôm chua, mắm ruốc</li>
+                            <li>Các loại bánh Huế</li>
+                            <li>Trà cung đình</li>
+                        </ol>
+                    </li>
+                </ol>
             </div>
             
-            <div class="rating-summary">
-                <span class="rating-stars">★★★★☆</span>
-                <span class="rating-score">4.5</span>
-                <div class="rating-bar">
-                    <div class="rating-fill" style="width: 88%"></div>
-                </div>
-                <span class="rating-percent">88%</span>
-            </div>
+            <h2>Giới thiệu về Huế</h2>
+            <p>Huế – vùng đất cổ kính, nơi từng là trung tâm văn hóa, chính trị của triều đại nhà Nguyễn. Với vẻ đẹp trầm mặc, cổ kính và đậm chất thơ, Huế không chỉ hấp dẫn bởi các công trình kiến trúc cung đình mà còn bởi phong cách sống chậm rãi, nhẹ nhàng và đầy tinh tế của người dân nơi đây.</p>
             
-            <button class="add-review-btn">Gửi đánh giá của bạn</button>
+            <p>Sông Hương, núi Ngự, các lăng tẩm, đền đài... tất cả tạo nên một bức tranh Huế vừa thơ mộng vừa đậm chất lịch sử. Nhưng Huế không chỉ là nơi để nhìn, để ngắm, để nói về những món quà chứa đựng cả hồn quê.</p>
             
-            <div class="reviews">
-                <div class="review-item">
-                    <div class="review-author">Lâm Phong</div>
-                    <div class="rating-stars">★★★★★</div>
-                    <div class="review-text">Tôi đã mua để biếu người thân, mọi người rất thích hương vị của rượu. Đóng gói cẩn thận, giao hàng nhanh chóng. Đây là đồ uống đặc sản mà tôi rất hài lòng.</div>
-                </div>
-                
-                <div class="review-item">
-                    <div class="review-author">Sarah Anderson</div>
-                    <div class="rating-stars">★★★★☆</div>
-                    <div class="review-text">Tôi mua rượu để gửi tặng đối tác và được đánh giá rất cao, mẫu mã đẹp, chất lượng rượu tốt, hương vị đặc trưng. Tuy nhiên, giá hơi cao một chút, nên 4 sao.</div>
-                </div>
-            </div>
+            <h2>Quà lưu niệm đặc trưng của Huế</h2>
+            <h3>Nón lá Huế</h3>
+            <p>Chiếc nón là được làm công phu với lớp thơ ẩn hiện bên trong, vừa là vật dụng che nắng che mưa, vừa là biểu tượng văn hóa.</p>
+            
+            <h3>Hương trầm Thủy Xuân</h3>
+            <p>Những bó hương rực rỡ không chỉ mang hương thơm đặc trưng mà còn là sản phẩm nghệ thuật thủ công truyền thống.</p>
+            
+            <h3>Tranh thêu tay</h3>
+            <p>Tinh tế trong từng đường kim mũi chỉ, tranh thêu Huế thể hiện sự khéo léo và tỉ mỉ của người nghệ nhân.</p>
+            
+            <h3>Gốm sứ công đình</h3>
+            <p>Những sản phẩm tái hiện lại nét đẹp cung đình xưa, phù hợp làm quà tặng sang trọng và ý nghĩa.</p>
+            
+            <img src="/api/placeholder/600/400" alt="Các sản phẩm lưu niệm đặc trưng của Huế" class="product-image">
+            
+            <h2>Đặc sản nổi bật của Huế</h2>
+            <h3>Mè xừng</h3>
+            <p>Dẻo, ngọt bùi – mè xừng là món ăn vặt nhưng không thể thiếu mỗi khi nhắc đến đặc sản xứ Huế.</p>
+            
+            <h3>Tôm chua, mắm ruốc</h3>
+            <p>Các loại mắm của Huế đậm đà, cay nồng, mang đậm hương vị miền Trung.</p>
+            
+            <h3>Các loại bánh Huế</h3>
+            <p>Bánh lọc, bánh nậm, bánh ít – nhỏ xinh, tinh tế như chính con người Huế.</p>
+            
+            <h3>Trà cung đình</h3>
+            <p>Vị thơm nhẹ, tốt cho sức khỏe, thường được người dân Huế dùng như một liệu pháp dưỡng sinh.</p>
+            
+            <img src="/api/placeholder/600/400" alt="Bánh Huế truyền thống" class="product-image">
+        </div>
+        
+        <div class="sidebar">
+            <h3>Danh mục sản phẩm</h3>
+            <ul>
+                <li><a href="#">Mè xừng</a></li>
+                <li><a href="#">Mứt Huế</a></li>
+                <li><a href="#">Trà Cung Đình Huế</a></li>
+                <li><a href="#">Đặc Trưng</a></li>
+                <li><a href="#">Nón Lá Huế</a></li>
+                <li><a href="#">Nem Chả</a></li>
+                <li><a href="#">Mắm ruốc</a></li>
+                <li><a href="#">Hương Trầm Huế</a></li>
+                <li><a href="#">Mật Huế</a></li>
+                <li><a href="#">Bánh Huế</a></li>
+                <li><a href="#">Hải Sản Khô Huế</a></li>
+            </ul>
         </div>
     </div>
-
-    <script>
-        // Thumbnail click functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            const mainImage = document.querySelector('.main-image');
-            
-            thumbnails.forEach(function(thumbnail) {
-                thumbnail.addEventListener('click', function() {
-                    mainImage.src = this.src.replace('70/70', '500/500');
-                });
-            });
-            
-            // Quantity controls
-            const minusBtn = document.querySelector('.quantity-btn:first-child');
-            const plusBtn = document.querySelector('.quantity-btn:last-child');
-            const quantityInput = document.querySelector('.quantity-input');
-            
-            minusBtn.addEventListener('click', function() {
-                let value = parseInt(quantityInput.value);
-                if (value > 1) {
-                    quantityInput.value = value - 1;
-                }
-            });
-            
-            plusBtn.addEventListener('click', function() {
-                let value = parseInt(quantityInput.value);
-                quantityInput.value = value + 1;
-            });
-        });
-    </script>
 </body>
 </html>

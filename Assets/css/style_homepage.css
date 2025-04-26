@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -986,6 +986,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Top row with horizontal layout */
@@ -994,6 +997,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 80px;
+  
 }
 
 .top_feature {
@@ -1002,6 +1006,7 @@ body {
   align-items: center;
   flex-basis: 45%;
   gap: 15px;
+  box-sizing: border-box;
 }
 
 .top_feature .feature_icon img{

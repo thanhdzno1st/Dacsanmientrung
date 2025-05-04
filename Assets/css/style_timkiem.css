@@ -63,18 +63,17 @@ body {
 
 .filter-title {
     font-weight: 600;
-    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.filter-content {
-    margin-bottom: 15px;
+.discount{
+    border-top: 1px solid #f0f0f0;
+    padding-top: 5px;
+    margin-top: 10px;
 }
-.filter-content-bottom-border {
-    border-bottom: 1px solid #f0f0f0;
-}
+
 .bg-blue {
     background-color: #4a90e2;
     color: white;

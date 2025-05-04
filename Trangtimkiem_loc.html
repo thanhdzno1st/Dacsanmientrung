@@ -54,7 +54,7 @@
                             <label for="quangnam">Quảng Nam</label>
                         </div>
                     </div>
-                    <div class="filter-title d-flex justify-content-between align-items-center">
+                    <div class="filter-title d-flex justify-content-between align-items-center discount">
                         <span >Giảm giá</span>
                         <label class="switch">
                             <input type="checkbox" checked>
@@ -76,11 +76,12 @@
                             <input type="text" class="price-input" placeholder="Từ" value="0">
                             <input type="text" class="price-input" placeholder="Đến" value="500.000">
                         </div>
-                        <div class="price-range-slider">
-                            <div class="range-bar" style="left: 0; right: 50%; width: 50%;"></div>
-                            <div class="range-handle" style="left: 0%"></div>
-                            <div class="range-handle" style="left: 50%"></div>
+                        <div class="price-range-slider" id="price-slider">
+                            <div class="range-bar" id="range-bar"></div>
+                            <div class="range-handle" id="handle-min"></div>
+                            <div class="range-handle" id="handle-max"></div>
                         </div>
+                        
                         <button class="apply-btn">ÁP DỤNG</button>
                     </div>
                 </div>
@@ -484,5 +485,9 @@
             </div>
         </div>
     </div>
+    <script src="./Assets/js/price-range-slider.js"></script>
+    <script src="./Assets/js/improved-filter-toggle.js"></script>
+    <script src="./Assets/js/reset-all-filter.js"></script>
+
 </body>
 </html>

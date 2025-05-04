@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="Assets/css/style_checkout.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <!-- Checkout steps -->
+        <div class="checkout-steps">
+            <div class="step active">
+                <div class="step-icon">
+                    <img src="icons/cart.svg" alt="Giỏ hàng">
+                </div>
+                <div class="step-text">Giỏ hàng</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step">
+                <div class="step-icon">
+                    <img src="icons/check.svg" alt="Kiểm tra">
+                </div>
+                <div class="step-text">Kiểm tra</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step">
+                <div class="step-icon">
+                    <img src="icons/payment.svg" alt="Thanh toán">
+                </div>
+                <div class="step-text">Thanh toán</div>
+            </div>
+        </div>
+
+        <!-- Cart content -->
+        <div class="cart-container">
+            <!-- Cart items -->
+            <div class="cart-items">
+                <!-- Item 1 -->
+                <div class="cart-item">
+                    <img src="products/ruou.jpg" alt="Rượu Nhật Dã Dế Vương" class="item-image">
+                    <div class="item-details">
+                        <div>
+                            <h3 class="item-name">RƯỢU NHẬT DÃ DẾ VƯƠNG (VÀNG)</h3>
+                            <div class="item-tags">
+                                <div class="item-tag">
+                                    <img src="icons/delivery.svg" alt="Giao hàng"> Miễn phí vận chuyển
+                                </div>
+                                <div class="item-tag">
+                                    <img src="icons/refund.svg" alt="Hoàn tiền"> Đảm bảo chất lượng
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-price-quantity">
+                            <div class="item-price">
+                                <span class="original-price">12,990,000₫</span>
+                                <span class="current-price">11,017,685₫</span>
+                            </div>
+                            <div class="quantity-actions">
+                                <div class="quantity-control">
+                                    <button class="qty-btn decrease">−</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn increase">+</button>
+                                </div>
+                                <button class="remove-btn">
+                                    <img src="icons/trash.svg" alt="Xóa">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="cart-item">
+                    <img src="products/banh.jpg" alt="Bánh gừng Nguyên Triều" class="item-image">
+                    <div class="item-details">
+                        <div>
+                            <h3 class="item-name">Bánh gừng Nguyên Triều - Hộp ấm dưỡng</h3>
+                            <div class="item-tags">
+                                <div class="item-tag">
+                                    <img src="icons/delivery.svg" alt="Giao hàng"> Miễn phí vận chuyển
+                                </div>
+                                <div class="item-tag">
+                                    <img src="icons/stock.svg" alt="Kho hàng"> Còn hàng
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-price-quantity">
+                            <div class="item-price">
+                                <span class="original-price">3,420,000₫</span>
+                                <span class="current-price">1,670,000₫</span>
+                            </div>
+                            <div class="quantity-actions">
+                                <div class="quantity-control">
+                                    <button class="qty-btn decrease">−</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn increase">+</button>
+                                </div>
+                                <button class="remove-btn">
+                                    <img src="icons/trash.svg" alt="Xóa">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="cart-item">
+                    <img src="products/me.jpg" alt="Mè xừng Thành Hưng" class="item-image">
+                    <div class="item-details">
+                        <div>
+                            <h3 class="item-name">Mè xừng Thành Hưng 225gr</h3>
+                            <div class="item-tags">
+                                <div class="item-tag">
+                                    <img src="icons/delivery.svg" alt="Giao hàng"> Miễn phí vận chuyển
+                                </div>
+                                <div class="item-tag">
+                                    <img src="icons/stock.svg" alt="Kho hàng"> Còn hàng
+                                </div>
+                                <div class="item-tag">
+                                    <img src="icons/refund.svg" alt="Hoàn tiền"> Đảm bảo chất lượng
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-price-quantity">
+                            <div class="item-price">
+                                <span class="current-price">585,000₫</span>
+                            </div>
+                            <div class="quantity-actions">
+                                <div class="quantity-control">
+                                    <button class="qty-btn decrease">−</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn increase">+</button>
+                                </div>
+                                <button class="remove-btn">
+                                    <img src="icons/trash.svg" alt="Xóa">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart summary -->
+            <div class="cart-summary">
+                <h2 class="summary-title">Chi tiết thanh toán</h2>
+                <div class="summary-row">
+                    <span>Tạm tính</span>
+                    <span>13,272,685₫</span>
+                </div>
+                <div class="summary-row discount">
+                    <span>Giảm giá</span>
+                    <span>-3,000,000₫</span>
+                </div>
+                <div class="summary-row">
+                    <span>Phí vận chuyển</span>
+                    <span>0₫</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Tổng cộng</span>
+                    <span>10,272,685₫</span>
+                </div>
+                <button class="checkout-btn">Tiến hành thanh toán</button>
+            </div>
+        </div>
+    </div>
+    <div class="best_seller-container">
+        <div class="section-header">
+            <h2 class="section-title">Khách hàng cũng quan tâm</h2>
+            <a href="#" class="view-all">
+                Xem tất cả <span class="arrow-icon">›</span>
+            </a>
+        </div>
+
+        <hr class="section-divider">
+
+        <div class="product-grid_2">
+            <!-- Product 1 -->
+            <div class="product-card_2">
+                <div class="product-image_2">
+                    <img src="product1.jpg" alt="Mắm tôm chua Dì Cẩn">
+                </div>
+                <h3 class="product-name_2">Mắm tôm chua Dì Cẩn</h3>
+                <div class="product-details_2">
+                    <span class="product-price_2">65.000đ</span>
+                    <span class="product-rating_2">★ 4.5</span>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card_2">
+                <div class="product-image_2">
+                    <img src="product2.jpg" alt="Trà cung đình Huế 500gr">
+                    <div class="wishlist-icon_2">♡</div>
+                </div>
+                <h3 class="product-name_2">Trà cung đình Huế 500gr</h3>
+                <div class="product-details_2">
+                    <span class="product-price_2">70.000đ</span>
+                    <span class="product-rating_2">★ 4.8</span>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card_2">
+                <div class="product-image_2">
+                    <img src="product3.jpg" alt="Tắc kè khô ngâm rượu">
+                </div>
+                <h3 class="product-name_2">Tắc kè khô ngâm rượu</h3>
+                <div class="product-details_2">
+                    <span class="product-price_2">90.000đ</span>
+                    <span class="product-rating_2">★ 4.7</span>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card_2">
+                <div class="product-image_2">
+                    <img src="product4.jpg" alt="Bánh khô mè Bà Liễu">
+                </div>
+                <h3 class="product-name_2">Bánh khô mè Bà Liễu</h3>
+                <div class="product-details_2">
+                    <span class="product-price_2">200.000đ</span>
+                    <span class="product-rating_2">★ 3.9</span>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card_2">
+                <div class="product-image_2">
+                    <img src="product5.jpg" alt="Chả bò Đà Nẵng">
+                </div>
+                <h3 class="product-name_2">Chả bò Đà Nẵng</h3>
+                <div class="product-details_2">
+                    <span class="product-price_2">700.000đ</span>
+                    <span class="product-rating_2">★ 4.7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

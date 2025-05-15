@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặc sản Hedaqua</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* HEADER TOP */
+    .header-top {
+      background-color: #6ab04c;
+      color: white;
+      font-size: 14px;
+      padding: 6px 0;
+    }
+
+    .header-top .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    .header-top .left,
+    .header-top .right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    /* HEADER BOTTOM */
+    .header-bottom {
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header-bottom .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo img {
+      height: 48px;
+    }
+
+    .search-box {
+      flex: 1;
+      margin: 0 30px;
+      max-width: 500px;
+      display: flex;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid #6ab04c;
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .search-box button {
+      background-color: #6ab04c;
+      border: none;
+      padding: 10px 16px;
+      color: white;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .hotline {
+      background-color: #6ab04c;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .icons {
+      display: flex;
+      gap: 16px;
+      margin-left: 20px;
+    }
+
+    .icons > div {
+      background-color: #6ab04c;
+      border-radius: 4px;
+      position: relative;
+      width: 37px;
+      height: 37px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icons i {
+      color: white;
+      font-size: 18px;
+    }
+
+    .icons .badge {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      background-color: #f24822;
+      color: white;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    /* NAVBAR */
+    .nabar-container {
+      background-color: #f4f4f4;
+      border-bottom: 4px solid #6ab04c;
+    }
+
+    .navbar {
+      margin: auto;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 150px;
+      height: 60px;
+    }
+
+    .menu-left {
+      display: flex;
+      align-items: center;
+      color: #477433;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .menu-left i {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .menu-right {
+      display: flex;
+      gap: 40px;
+    }
+
+    .menu-right a {
+      color: #477433;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .menu-right a:hover {
+      color: #6ab04c;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+        height: auto;
+      }
+
+      .menu-right {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+    }
+
+    /* MAIN CONTENT */
+    /* Main Content */
+.main-content {
+    padding: 2rem 0;
+}
+
+.breadcrumb {
+    margin-bottom: 2rem;
+    opacity: 0.6;
+}
+
+.breadcrumb a {
+    color: #717171;
+    text-decoration: none;
+}
+
+.breadcrumb .active {
+    color: #6ab04c;
+    border-bottom: 1px solid #009432;
+    padding-bottom: 0.25rem;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Side Menu */
+.side-menu {
+    width: 304px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 1rem 0;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.user-profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #f6f6f6;
+}
+
+.side-menu nav {
+    margin-top: 1rem;
+}
+
+.side-menu nav a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+}
+
+.side-menu nav a.active {
+    border-left: 3px solid #009432;
+    color: #009432;
+}
+
+.side-menu nav a.logout {
+    color: #c91433;
+}
+
+/* Payment Content */
+.payment-content {
+    flex: 1;
+    max-width: 640px;
+}
+
+.payment-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.payment-content > p {
+    color: #717171;
+    margin-bottom: 2.5rem;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.method-card {
+    flex: 1;
+    max-width: 392px;
+    background: #f9f9f9;
+    border: 1px solid #f6f6f6;
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-logos {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.card-logos img {
+    width: 55px;
+    height: 40px;
+}
+
+.installment {
+    margin-top: 2rem;
+}
+
+.manage-installment {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #009432;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+    /* FOOTER */
+    .footer {
+      background-color: #315123;
+      color: #fff;
+      padding: 40px 60px;
+    }
+
+    .footer .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-column-1,
+    .footer-column-2,
+    .footer-column-3 {
+      padding-right: 30px;
+    }
+
+    .footer-column-1 { flex-basis: 40%; }
+    .footer-column-2,
+    .footer-column-3 { flex-basis: 25%; }
+
+    .footer h3 {
+      color: #8ee569;
+      margin-top: 0;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-title img {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .payment-icons img,
+    .social-icons img {
+      width: 50px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER TOP -->
+  <div class="header-top">
+    <div class="container">
+      <div class="left">
+        <div><i class="fas fa-phone"></i> +0702-500-230</div>
+        <div><i class="fas fa-envelope"></i> thanh261220@gmail.com</div>
+        <div><i class="fas fa-map-marker-alt"></i> 48 Cao Thắng, TP. Đà Nẵng</div>
+      </div>
+      <div class="right">
+        <div><i class="fas fa-dollar-sign"></i> Số dư</div>
+        <div><i class="fas fa-user"></i> Tài khoản</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER BOTTOM -->
+  <div class="header-bottom">
+    <div class="container">
+      <div class="logo">
+        <img src="./Assets/img/logo.png" alt="Logo">
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Bạn cần tìm gì ?">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="hotline">
+        <i class="fas fa-headset"></i> Hotline: 19001599
+      </div>
+
+      <div class="icons">
+        <div>
+          <i class="fas fa-user"></i>
+        </div>
+        <div>
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="badge">5</span>
+        </div>
+        <div>
+          <i class="fas fa-shopping-cart"></i>
+          <span class="badge">7</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <div class="nabar-container">
+    <div class="navbar">
+      <div class="menu-left">
+        <i class="fas fa-bars"></i>
+        <span>Tất cả danh mục</span>
+      </div>
+      <div class="menu-right">
+        <a href="#">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Blog</a>
+        <a href="#">Liên hệ</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container main-content">
+    <div class="breadcrumb">
+        <a href="#">Tài khoản</a>
+        <span>/</span>
+        <a href="#" class="active">Thanh toán và trả góp</a>
+    </div>
+
+    <!-- Side Menu and Payment Content here -->
+    <div class="content-wrapper">
+        <!-- Side Menu -->
+        <aside class="side-menu">
+            <div class="user-profile">
+                <img src="./Assets/img/hinh1.png" alt="Profile">
+                <span>Thinhdoan</span>
+            </div>
+            <nav>
+                <a href="#"><img src="./Assets/img/hinh2.png" alt="">Thông tin cá nhân</a>
+                <a href="#" class="active"><img src="./Assets/img/hinh3.png" alt="">Thanh toán & Trả góp</a>
+                <a href="#"><img src="./Assets/img/hinh4.png" alt="">Đơn hàng</a>
+                <a href="#"><img src="./Assets/img/hinh5.png" alt="">Thông báo</a>
+                <a href="#" class="logout"><img src="./Assets/img/hinh6.png" alt="">Đăng xuất</a>
+            </nav>
+        </aside>
+
+        <!-- Payment Content -->
+        <section class="payment-content">
+            <h2>Thẻ</h2>
+            <p>Quản lí phương thức thanh toán</p>
+
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <div class="method-card">
+                        <span>Thẻ tín dụng hoặc ghi nợ</span>
+                        <img src="./Assets/img/hinh7.png" alt="Edit">
+                    </div>
+                    <div class="card-logos">
+                        <img src="./Assets/img/american express.png" alt="American Express">
+                        <img src="./Assets/img/mastercard.png" alt="Mastercard">
+                        <img src="./Assets/img/visa.png" alt="Visa">
+                    </div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="method-card">
+                        <span>PayPal</span>
+                        <img src="./Assets/img/hinh7.png" alt="Edit">
+                    </div>
+                    <div class="card-logos">
+                        <img src="./Assets/img/paypal.png" alt="PayPal">
+                    </div>
+                </div>
+            </div>
+
+            <div class="installment">
+                <h2>Trả góp</h2>
+                <a href="#" class="manage-installment">
+                    Quản lí trả góp của bạn
+                    <img src="./Assets/img/hinh8.png" alt="Arrow">
+                </a>
+            </div>
+        </section>
+    </div>
+</main>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-column-1">
+        <div class="logo-title">
+          <img src="./Assets/img/logo_2.png" alt="Logo" />
+        </div>
+        <p>Chúng tôi hi vọng tất cả người tiêu dùng Việt Nam được sử dụng những đặc sản ngon nhất miền Trung, dịch vụ tận tâm và trải nghiệm mua sắm tiện lợi tại cửa hàng Đặc sản miền Trung.</p>
+        <h3>HÌNH THỨC THANH TOÁN</h3>
+        <div class="payment-icons">
+          <img src="./Assets/img/paypal.png" alt="PayPal" />
+          <img src="./Assets/img/american express.png" alt="American Express" />
+          <img src="./Assets/img/visa.png" alt="Visa" />
+          <img src="./Assets/img/mastercard.png" alt="MasterCard" />
+        </div>
+      </div>
+
+      <div class="footer-column-2">
+        <h3>CHÍNH SÁCH</h3>
+        <p>Chính sách thành viên</p>
+        <p>Chính sách thanh toán</p>
+        <p>Chính sách bảo hành</p>
+        <p>Chính sách trả góp</p>
+        <p>Bảo mật thông tin cá nhân</p>
+      </div>
+
+      <div class="footer-column-3">
+        <h3>THÔNG TIN CHUNG</h3>
+        <p><strong>Địa chỉ:</strong> 48 Cao Thắng, Hải Châu, Đà Nẵng</p>
+        <p><strong>Điện thoại:</strong> 19001599</p>
+        <p><strong>Email:</strong> dacsanmientrung@gmail.com</p>
+        <h3>Kết Nối Sàn</h3>
+        <div class="social-icons">
+          <img src="./Assets/img/facebook.png" alt="Facebook" />
+          <img src="./Assets/img/instagram.png" alt="Instagram" />
+          <img src="./Assets/img/twitter.png" alt="Twitter" />
+          <img src="./Assets/img/google.png" alt="Google" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

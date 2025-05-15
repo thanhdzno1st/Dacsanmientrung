@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Đăng nhập</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500" rel="stylesheet">
+  <style>
+    :root {
+  --app-primary: rgba(12, 104, 244, 1);
+  --black: rgba(12, 12, 12, 1);
+  --neutralgray-2d2d2d: rgba(45, 45, 45, 1);
+  --neutralgray-717171: rgba(113, 113, 113, 1);
+  --neutralgray-b4b4b4: rgba(180, 180, 180, 1);
+  --neutralgray-cbcbcb: rgba(203, 203, 203, 1);
+  --primaryprimary-300: rgba(12, 104, 244, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+    background-image: url('./Assets/img/background.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: transparent;
+}
+
+.login-background {
+  width: 1920px;
+  height: 1260px;
+  background: url(../--ng-nh-p.png) 50% 50% / cover;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  width: 600px;
+  height: 624px;
+  top: 317px;
+  left: 660px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.tabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 2px solid var(--neutralgray-cbcbcb);
+  margin-bottom: 40px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--neutralgray-717171);
+}
+
+.tab.active {
+  color: var(--app-primary);
+  border-bottom: 2px solid var(--app-primary);
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  height: 48px;
+  padding: 12px 40px;
+  border: 1px solid var(--neutralgray-b4b4b4);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.input-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  left: 12px;
+}
+
+.input-icon-right {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--neutralgray-717171);
+  font-size: 14px;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--neutralgray-b4b4b4);
+  border-radius: 4px;
+}
+
+.forgot-password {
+  color: var(--app-primary);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-button {
+  width: 100%;
+  height: 48px;
+  background: var(--primaryprimary-300);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--neutralgray-cbcbcb);
+}
+
+.divider-text {
+  color: var(--neutralgray-2d2d2d);
+  font-size: 16px;
+}
+
+.social-login {
+  display: flex;
+  gap: 24px;
+}
+
+.social-button {
+  flex: 1;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid var(--app-primary);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--app-primary);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.google-text {
+  font-size: 16px;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-background">
+      <div class="card">
+       
+        <div class="tabs">
+          <button class="tab active">Đăng nhập</button>
+          <button class="tab">Tạo tài khoản</button>
+        </div>
+
+      
+        <h3 class="heading">Đăng Nhập</h3>
+
+      
+        <form class="login-form">
+         
+          <div class="input-group">
+            <img src="./Assets/img/sms.png" alt="Email icon" class="input-icon">
+            <input type="text" placeholder="Tên đăng nhập/Email" class="input">
+          </div>
+
+         
+          <div class="input-group">
+            <img src="./Assets/img/key.png" alt="Password icon" class="input-icon">
+            <input type="password" placeholder="Mật khẩu" class="input">
+            <img src="./Assets/img/eye-slash.png" alt="Show password" class="input-icon-right">
+          </div>
+
+          <div class="form-actions">
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox">
+              <span>Duy trì đăng nhập</span>
+            </label>
+            <a href="#" class="forgot-password">Quên mật khẩu ?</a>
+          </div>
+
+          <button type="submit" class="login-button">Đăng Nhập</button>
+
+       
+          <div class="divider">
+            <span class="divider-line"></span>
+            <span class="divider-text">Hoặc</span>
+            <span class="divider-line"></span>
+          </div>
+
+          
+          <div class="social-login">
+            <button class="social-button google">
+              <img src="./Assets/img/google logo.png" alt="Google logo" class="social-icon">
+              <span class="google-text">
+                <span style="color: #0c68f4">G</span><span style="color: #ff0f2f">o</span><span style="color: #f4dc0c">o</span><span style="color: #0c68f4">g</span><span style="color: #109a3e">l</span><span style="color: #ff0f2f">e</span>
+              </span>
+            </button>
+            <button class="social-button facebook">
+              <img src="./Assets/img/facebook.png" alt="Facebook" class="social-icon">
+              <span>Facebook</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

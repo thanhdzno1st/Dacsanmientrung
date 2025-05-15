@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin cá nhân - Đặc sản Hedaqua</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Top */
+        .header-top {
+            background: #6ab04c;
+            padding: 6px 0;
+            color: white;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top .left,
+        .header-top .right {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        .header-top i {
+            margin-right: 8px;
+        }
+
+        /* Main Header */
+        .header-bottom {
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .header-bottom .container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo img {
+            height: 48px;
+        }
+
+        .search-box {
+            flex: 1;
+            max-width: 500px;
+            display: flex;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #6ab04c;
+            border-right: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-box button {
+            background: #6ab04c;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .hotline {
+            background: #6ab04c;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .icons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .icons>div {
+            background: #6ab04c;
+            width: 37px;
+            height: 37px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .icons i {
+            color: white;
+        }
+
+        .icons .badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: #f24822;
+            color: white;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        /* Navbar */
+        .navbar-container {
+            background: #f4f4f4;
+            border-bottom: 4px solid #6ab04c;
+        }
+
+        .navbar {
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #477433;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .menu-right {
+            display: flex;
+            gap: 40px;
+        }
+
+        .menu-right a {
+            color: #477433;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .menu-right a:hover {
+            color: #6ab04c;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 30px 0;
+        }
+
+        .breadcrumb {
+            margin-bottom: 24px;
+            color: #717171;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #717171;
+            text-decoration: none;
+        }
+
+        .breadcrumb .active {
+            color: #6ab04c;
+            border-bottom: 1px solid #6ab04c;
+            padding-bottom: 2px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            gap: 24px;
+        }
+
+        /* Sidebar */
+        .side-menu {
+            width: 304px;
+            background: white;
+            border-radius: 8px;
+            padding: 20px 0;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .user-profile img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .user-profile span {
+            font-weight: 500;
+        }
+
+        .side-menu nav {
+            margin-top: 10px;
+        }
+
+        .side-menu nav a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+
+        .side-menu nav a.active {
+            background: #f0f8eb;
+            color: #6ab04c;
+            border-left: 3px solid #6ab04c;
+        }
+
+        .side-menu nav a:hover {
+            background: #f0f8eb;
+        }
+
+        .side-menu nav a.logout {
+            color: #dc3545;
+        }
+
+        .side-menu nav img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Personal Info Section */
+        .personal-info {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            flex: 1;
+        }
+
+        .info-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .info-header h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .info-header p {
+            color: #717171;
+            font-size: 14px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 4px 12px;
+        }
+
+        .input-group input {
+            flex: 1;
+            padding: 8px 0;
+            border: none;
+            background: transparent;
+            color: #333;
+            outline: none;
+        }
+
+        .edit-btn {
+            background: none;
+            border: none;
+            padding: 4px;
+            cursor: pointer;
+        }
+
+        .edit-btn img {
+            width: 16px;
+            height: 16px;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+
+        .edit-btn:hover img {
+            opacity: 1;
+        }
+
+        /* Footer */
+        .footer {
+            background: #315123;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-column {
+            flex: 1;
+            padding-right: 30px;
+        }
+
+        .footer h3 {
+            color: #8ee569;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .payment-icons,
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .payment-icons img,
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="container">
+            <div class="left">
+                <div><i class="fas fa-phone"></i>+0702-500-230</div>
+                <div><i class="fas fa-envelope"></i>thanh261220@gmail.com</div>
+                <div><i class="fas fa-map-marker-alt"></i>48 Cao Thắng, TP. Đà Nẵng</div>
+            </div>
+            <div class="right">
+                <div><i class="fas fa-wallet"></i>Số dư</div>
+                <div><i class="fas fa-user"></i>Tài khoản</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Bottom -->
+    <div class="header-bottom">
+        <div class="container">
+            <div class="logo">
+                <img src="./Assets/img/logo.png" alt="Hedaqua">
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Bạn cần tìm gì ?">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="hotline">
+                <i class="fas fa-headset"></i>
+                Hotline: 19001599
+            </div>
+            <div class="icons">
+                <div>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="badge">5</span>
+                </div>
+                <div>
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge">7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar-container">
+        <div class="container">
+            <div class="navbar">
+                <div class="menu-left">
+                    <i class="fas fa-bars"></i>
+                    <span>Tất cả danh mục</span>
+                </div>
+                <div class="menu-right">
+                    <a href="#">Trang chủ</a>
+                    <a href="#">Giới thiệu</a>
+                    <a href="#">Sản phẩm</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Liên hệ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+        <div class="breadcrumb">
+            <a href="#">Tài khoản</a>
+            <span>/</span>
+            <a href="#" class="active">Thông tin cá nhân</a>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Sidebar -->
+            <aside class="side-menu">
+                <div class="user-profile">
+                    <img src="./Assets/img/hinh1.png" alt="Profile">
+                    <span>Thinhdoan</span>
+                </div>
+                <nav>
+                    <a href="#" class="active">
+                        <img src="./Assets/img/hinh2.png" alt="">
+                        Thông tin cá nhân
+                    </a>
+                    <a href="#">
+                        <img src="./Assets/img/hinh3.png" alt="">
+                        Thanh toán & Trả góp
+                    </a>
+                    <a href="#">
+                        <img src="./Assets/img/hinh4.png" alt="">
+                        Đơn hàng
+                    </a>
+                    <a href="#">
+                        <img src="./Assets/img/hinh5.png" alt="">
+                        Thông báo
+                    </a>
+                    <a href="#" class="logout">
+                        <img src="./Assets/img/hinh6.png" alt="">
+                        Đăng xuất
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Personal Info -->
+            <section class="personal-info">
+                <div class="info-header">
+                    <h2>Thông tin cá nhân</h2>
+                    <p>Xác thực danh tính</p>
+                </div>
+
+                <div class="info-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Họ và tên</label>
+                            <div class="input-group">
+                                <input type="text" value="Đoàn Hùng Thịnh" readonly>
+                                <button class="edit-btn">
+                                    <img src="./Assets/img/hinh7.png" alt="Edit">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <div class="input-group">
+                                <input type="email" value="Thinhdoan@gmail.com" readonly>
+                                <button class="edit-btn">
+                                    <img src="./Assets/img/hinh7.png" alt="Edit">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Số điện thoại</label>
+                            <div class="input-group">
+                                <input type="tel" value="+12345678910" readonly>
+                                <button class="edit-btn">
+                                    <img src="./Assets/img/hinh7.png" alt="Edit">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mật khẩu</label>
+                            <div class="input-group">
+                                <input type="password" value="********" readonly>
+                                <button class="edit-btn">
+                                    <img src="./Assets/img/hinh7.png" alt="Edit">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Địa chỉ</label>
+                            <div class="input-group">
+                                <input type=" text" value="43 Lê Hữu Trác, Sơn Trà, Đà Nẵng" readonly>
+                                <button class="edit-btn">
+                                    <img src="./Assets/img/hinh7.png" alt="Edit">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Postal code</label>
+                            <div class="input-group">
+                                <input type="text" value="Postal code" readonly>
+                                <button class="edit-btn">
+                                    <img src="./Assets/img/hinh7.png" alt="Edit">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-column">
+                <div class="logo">
+                    <img src="./Assets/img/logo_2.png" alt="Logo">
+                </div>
+                <p>Chúng tôi hi vọng tất cả người tiêu dùng Việt Nam được sử dụng những đặc sản ngon nhất miền Trung,
+                    dịch vụ tận tâm và trải nghiệm mua sắm tiện lợi tại cửa hàng Đặc sản miền Trung.</p>
+                <h3>HÌNH THỨC THANH TOÁN</h3>
+                <div class="payment-icons">
+                    <img src="./Assets/img/paypal.png" alt="PayPal">
+                    <img src="./Assets/img/american express.png" alt="American Express">
+                    <img src="./Assets/img/visa.png" alt="Visa">
+                    <img src="./Assets/img/mastercard.png" alt="MasterCard">
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>CHÍNH SÁCH</h3>
+                <p>Chính sách thành viên</p>
+                <p>Chính sách thanh toán</p>
+                <p>Chính sách bảo hành</p>
+                <p>Chính sách trả góp</p>
+                <p>Bảo mật thông tin cá nhân</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>THÔNG TIN CHUNG</h3>
+                <p><strong>Địa chỉ:</strong> 48 Cao Thắng, Hải Châu, Đà Nẵng</p>
+                <p><strong>Điện thoại:</strong> 19001599</p>
+                <p><strong>Email:</strong> dacsanmientrung@gmail.com</p>
+                <h3>KẾT NỐI SÀN</h3>
+                <div class="social-icons">
+                    <img src="./Assets/img/facebook.png" alt="Facebook">
+                    <img src="./Assets/img/instagram.png" alt="Instagram">
+                    <img src="./Assets/img/twitter.png" alt="Twitter">
+                    <img src="./Assets/img/google.png" alt="Google">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
